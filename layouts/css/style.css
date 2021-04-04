@@ -1,0 +1,287 @@
+.bgpol {
+    background: no-repeat center center scroll,
+        linear-gradient(rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)),
+        url('https://m.tangtingbarberhome.com/assets/images/slider/4.jpg') !important;
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+    background-size: cover !important;
+}
+
+.login-img {
+    background: #1372e5 !important;
+}
+
+.header {
+    /*border-bottom: 0px !important;*/
+}
+
+.authentication input {
+    border-bottom: 1px solid #1372e5 !important;
+}
+
+.authentication i {
+    color: #1372e5 !important;
+}
+
+.btn-primary {
+    color: #fff !important;
+    background: linear-gradient(to bottom right, #1372e5, #0716c0) !important;
+    border-color: #1372e5 !important;
+}
+
+a {
+    color: #1372e5 !important;
+}
+
+.admin-navbar .nav-link {
+    color: #f9f7f7 !important;
+}
+
+.header-toggler {
+    color: #fff !important;
+}
+
+.admin-navbar .nav {
+    background: #090a22 !important;
+}
+
+.page-main:after {
+    background-image: linear-gradient(to left, #1372e5, #0716c0) !important;
+}
+
+.selectgroup-input:checked+.selectgroup-button {
+    border-color: #1372e5 !important;
+    color: #1372e5 !important;
+}
+
+#back-to-top {
+    background: linear-gradient(to bottom right, #1372e5, #0716c0) !important;
+    color: #fff !important;
+}
+
+#back-to-top:hover {
+    color: #1372e5 !important;
+    border: 2px solid #1372e5;
+}
+
+.bg-primary {
+    background: linear-gradient(to bottom right, #1372e5, #0716c0) !important;
+}
+
+.f9 {
+    font-size: 10px;
+}
+
+.f10 {
+    font-size: 10px;
+}
+
+.f11 {
+    font-size: 11px;
+}
+
+.f12 {
+    font-size: 12px;
+}
+
+.f13 {
+    font-size: 13px;
+}
+
+.f14 {
+    font-size: 14px;
+}
+
+.f15 {
+    font-size: 15px;
+}
+
+.f16 {
+    font-size: 16px;
+}
+
+.f17 {
+    font-size: 17px;
+}
+
+.f18 {
+    font-size: 18px;
+}
+
+html,
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.ctn_body {
+    overflow-y: scroll;
+    height: 90vh;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+/*layanan pilih dan horizontal scroll*/
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0, 40px, 0)
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeInUp {
+    from {
+        transform: translate3d(0, 40px, 0)
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1
+    }
+}
+
+.animated {
+    animation-duration: .3s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: .3s;
+    -webkit-animation-fill-mode: both
+}
+
+.animatedFadeInUp {
+    opacity: 0
+}
+
+.fadeInUp {
+    opacity: 0;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+}
+
+.crd {
+    display: flex;
+    /*min-width: 100%;
+    min-height: 100px;*/
+    overflow-x: auto;
+}
+
+.crd::-webkit-scrollbar {
+    display: none;
+}
+
+.my_row:before,
+.my_row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+[class*='my_col-'] {
+    float: left;
+    min-height: 1px;
+    width: 16.66%;
+    padding: 0px;
+}
+
+.my_col-1 {
+    width: 8.33%;
+}
+
+.my_col-2 {
+    width: 16.66%;
+}
+
+.my_col-3 {
+    width: 25%;
+}
+
+.my_col-4 {
+    width: 33.33%;
+}
+
+.my_col-5 {
+    width: 41.66%;
+}
+
+.my_col-6 {
+    width: 50%;
+}
+
+.my_col-7 {
+    width: 58.33%;
+}
+
+.my_col-8 {
+    width: 66.66%;
+}
+
+.my_col-9 {
+    width: 75%;
+}
+
+.my_col-10 {
+    width: 83.33%;
+}
+
+.my_col-11 {
+    width: 91.66%;
+}
+
+.my_col-12 {
+    width: 100%;
+}
+
+.carousel-item {
+    height: 100vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.carousel-caption {
+    max-width: 100% !important;
+    padding-left: 40px !important;
+    padding-right: 50px !important;
+    line-height: 20px !important;
+    position: absolute !important;
+    margin-left: unset !important;
+    text-align: center !important;
+    top: 50%;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: auto;
+    transform: translateY(-50%);
+}
+
+.text-blue {
+    color: #1372e5 !important;
+}
+
+.text-yellow {
+    color: #F9F871 !important;
+}
+
+.vertical-center {
+    position: absolute;
+    down: -10%;
+    left: 0%;
+    transform: translate(0%, -90%);
+    -webkit-transform: translate(0%, -90%);
+}
