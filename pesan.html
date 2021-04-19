@@ -12,6 +12,33 @@
     <link rel="stylesheet" href="assets/css/style.min.css">
     <title>Doctor Consultant</title>
     <link rel="stylesheet" href="https://pictogrammers.github.io/@mdi/font/5.4.55/css/materialdesignicons.min.css">
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBYZRV-SsiY8ks2oMmArD88FN0WhzWCD40&sensor=false"></script>
+    <script type="text/javascript">
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function (p) {
+                var LatLng = new google.maps.LatLng(p.coords.latitude, p.coords.longitude);
+                var mapOptions = {
+                    center: LatLng,
+                    zoom: 13,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+                var map = new google.maps.Map(document.getElementById("dvMap"), mapOptions);
+                var marker = new google.maps.Marker({
+                    position: LatLng,
+                    map: map,
+                    title: "<div style = 'height:60px;width:200px'><b>Your location:</b><br />Latitude: " +
+                        p.coords.latitude + "<br />Longitude: " + p.coords.longitude
+                });
+                google.maps.event.addListener(marker, "click", function (e) {
+                    var infoWindow = new google.maps.InfoWindow();
+                    infoWindow.setContent(marker.title);
+                    infoWindow.open(map, marker);
+                });
+            });
+        } else {
+            alert('Geo Location feature is not supported in this browser.');
+        }
+    </script>
 </head>
 
 <body onload="myFunction()">
@@ -54,51 +81,56 @@
         <section class="blog my-4">
             <div class="container">
                 <h5 class="blog-title pb-2">Pesanan</h5>
-                    <ul class="list-group rounded mb-3">
-                        <a href="pesan.html"
-                            class="border-0 list-group-item list-group-item-action d-flex justify-content-start align-items-center">
-                            <div class="flex-grow-1">
-                                Pangkas Rambut<br>
-                                <small class="text-muted">Rp 25.000</small>
-                            </div>
-                            <div class="flex-column text-right">
-                                <i class="mdi mdi-delete-empty icon-style"></i>
-                            </div>
-                        </a>
-                    </ul>
-                
-                <h5 class="blog-title pb-2">Lanjutan</h5>
                 <ul class="list-group rounded mb-3">
                     <a href="pesan.html"
                         class="border-0 list-group-item list-group-item-action d-flex justify-content-start align-items-center">
                         <div class="flex-grow-1">
+                            Pangkas Rambut<br>
+                            <small class="text-muted">Rp 25.000</small>
+                        </div>
+                        <div class="flex-column text-right">
+                            <i class="mdi mdi-delete-empty icon-style"></i>
+                        </div>
+                    </a>
+                </ul>
+
+                <h5 class="blog-title pb-2">Lanjutan</h5>
+                <ul class="list-group rounded mb-3">
+                    <li class="border-0 list-group-item list-group-item-action d-flex justify-content-start align-items-center"
+                        data-toggle="modal" data-target="#modalMap">
+                        <div class="flex-grow-1 ">
                             Atur Lokasi
                         </div>
                         <div class="flex-column text-right">
                             <i class="mdi mdi-map-marker icon-style"></i>
                         </div>
-                    </a>
+                    </li>
                 </ul>
-                    <form method="post">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="pilihan" value="onpoint">
-                            <label class="form-check-label" for="inlineRadio1">On Point</label>
-                          </div>
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="pilihan" value="booking">
-                            <label class="form-check-label" for="inlineRadio2">Booking</label>
-                          </div>
+                <form method="post">
+                    <div class="form-group mt-3">
+                        <label for="exampleEmail1">Keterangan</label>
+                        <textarea name="keterangan" rows="4" class="form-control bg-secondary border-0 rounded"
+                            style="resize: none;"></textarea>
+                    </div>
 
-                        <div class="form-group mt-3">
-                            <label for="exampleEmail1">Keterangan</label>
-                            <textarea name="keterangan" rows="4" class="form-control bg-secondary border-0 rounded" style="resize: none;"></textarea>
-                        </div>
-
-                        <div class="form-group">
-                            <button class="btn btn-info" name="submit">Pesan Sekarang</button>
-                        </div>
-                    </form>
+                    <div class="form-group">
+                        <button class="btn btn-info" name="submit">Pesan Sekarang</button>
+                    </div>
+                </form>
             </div>
+
+            <div class="modal fade" id="modalMap" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <div id="dvMap" style="width: 470px; height: 400px" class="rounded"></div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                                <button type="button" class="btn btn-primary">Ya, ini lokasi saya</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
         </section>
     </div>
 
